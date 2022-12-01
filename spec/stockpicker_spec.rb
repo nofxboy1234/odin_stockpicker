@@ -4,6 +4,7 @@ require './lib/stockpicker'
 
 describe 'stockpicker' do
   it 'takes in an array of stock prices and returns a pair [best_day_to_buy, best_day_to_sell' do
-    expect(stockpicker([1, 2])).to eql([3, 4])
+    stock_prices = [17, 3, 6, 9, 15, 8, 6, 1, 10]
+    expect(stockpicker(stock_prices)).to eql([1, 4])
   end
 end
