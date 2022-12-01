@@ -4,18 +4,14 @@ require 'pry-byebug'
 
 # binding.pry
 
-# Choose day to buy - must buy first (lowest value with lowest index)
-# lowest value with lowest index - array to hash [value, index]
-# Choose day to sell (highest value with index > buy_index)
-
-def lowest_value_with_lowest_index(stock_prices)
-  puts(stock_prices.each_with_index.to_h { |element, index| [index, element] })
-end
+# For each day - check if the max of the remaining values is greater than that day's value
+# If it is, pair its index up with that day's index i.e. [1, 4]
+# For each buy_sell pair created, get the difference of their values
+# Find the highest difference pair and return it
 
 def stockpicker(stock_prices)
-  [1, 4]
-  lowest_value_with_lowest_index(stock_prices)
+  # [1, 4]
 end
 
 stock_prices = [17, 3, 6, 9, 15, 8, 6, 1, 10]
-stockpicker stock_prices
+puts stockpicker stock_prices
