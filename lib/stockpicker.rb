@@ -8,6 +8,14 @@ require 'pry-byebug'
 # lowest value with lowest index - array to hash [value, index]
 # Choose day to sell (highest value with index > buy_index)
 
-def stockpicker(_stock_prices)
-  [1, 4]
+def lowest_value_with_lowest_index(stock_prices)
+  puts(stock_prices.each_with_index.to_h { |element, index| [index, element] })
 end
+
+def stockpicker(stock_prices)
+  [1, 4]
+  lowest_value_with_lowest_index(stock_prices)
+end
+
+stock_prices = [17, 3, 6, 9, 15, 8, 6, 1, 10]
+stockpicker stock_prices
