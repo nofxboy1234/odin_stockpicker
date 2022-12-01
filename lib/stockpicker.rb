@@ -4,11 +4,9 @@ require 'pry-byebug'
 
 # binding.pry
 
-# for value in [1, 2, 3, 4, 5, 6] do
-# binding.pry if value == 3
-#   puts 'yay!'
-#   puts 'hello'
-# end
+# Choose day to buy - must buy first (lowest value with lowest index)
+# lowest value with lowest index - array to hash [value, index]
+# Choose day to sell (highest value with index > buy_index)
 
 def stockpicker(_stock_prices)
   [1, 4]
