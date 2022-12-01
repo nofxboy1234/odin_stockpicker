@@ -34,5 +34,5 @@ def stockpicker(stock_prices)
   best_buy_sell_days
 end
 
-stock_prices = [17, 3, 6, 9, 15, 8, 6, 1, 10]
-p stockpicker stock_prices
+# stock_prices = [17, 3, 6, 9, 15, 8, 6, 1, 10]
+# p stockpicker stock_prices
