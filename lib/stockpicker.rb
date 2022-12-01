@@ -1,4 +1,11 @@
 # frozen_string_literal: true
 
 require 'pry-byebug'
-# binding.pry
+
+binding.pry
+
+for value in [1, 2, 3, 4, 5, 6] do
+  # binding.pry if value == 3
+  puts 'yay!'
+  puts 'hello'
+end
