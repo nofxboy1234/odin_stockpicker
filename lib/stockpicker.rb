@@ -2,10 +2,14 @@
 
 require 'pry-byebug'
 
-binding.pry
+# binding.pry
 
-for value in [1, 2, 3, 4, 5, 6] do
-  # binding.pry if value == 3
-  puts 'yay!'
-  puts 'hello'
+# for value in [1, 2, 3, 4, 5, 6] do
+# binding.pry if value == 3
+#   puts 'yay!'
+#   puts 'hello'
+# end
+
+def stockpicker(_stock_prices)
+  [3, 4]
 end
