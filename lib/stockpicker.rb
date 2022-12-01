@@ -10,8 +10,20 @@ require 'pry-byebug'
 # Find the highest difference pair and return it
 
 def stockpicker(stock_prices)
-  # [1, 4]
+  # binding.pry
+  buy_sell = {}
+
+  stock_prices.each_with_index do |value, day|
+    remaining_days = stock_prices.slice(day + 1..-1)
+    # p remaining_days
+    max_val = remaining_days.size.positive? ? remaining_days.max : value
+    buy_sell[day] = stock_prices.index(max_val) if max_val > value
+  end
+  p buy_sell
+  # buy_sell.each_pair do |_buy_day, _sell_day|
+  #   puts
+  # end
 end
 
 stock_prices = [17, 3, 6, 9, 15, 8, 6, 1, 10]
-puts stockpicker stock_prices
+stockpicker stock_prices
