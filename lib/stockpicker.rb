@@ -19,11 +19,20 @@ def stockpicker(stock_prices)
     max_val = remaining_days.size.positive? ? remaining_days.max : value
     buy_sell[day] = stock_prices.index(max_val) if max_val > value
   end
-  p buy_sell
-  # buy_sell.each_pair do |_buy_day, _sell_day|
-  #   puts
-  # end
+  # p buy_sell
+
+  highest_profit = 0
+  best_buy_sell_days = []
+
+  buy_sell.each_pair do |buy_day, sell_day|
+    profit = stock_prices[sell_day] - stock_prices[buy_day]
+    if profit > highest_profit
+      highest_profit = profit
+      best_buy_sell_days = [buy_day, sell_day]
+    end
+  end
+  best_buy_sell_days
 end
 
 stock_prices = [17, 3, 6, 9, 15, 8, 6, 1, 10]
-stockpicker stock_prices
+p stockpicker stock_prices
